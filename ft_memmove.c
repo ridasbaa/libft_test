@@ -1,29 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 02:44:54 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/19 00:08:59 by rsbaa            ###   ########.fr       */
+/*   Created: 2025/10/18 17:33:53 by rsbaa             #+#    #+#             */
+/*   Updated: 2025/10/19 00:10:13 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
+	unsigned char		*undest;
+	const unsigned char	*unsrc;
 	size_t				i;
-	const unsigned char	*us1;
-	const unsigned char	*us2;
 
-	us1 = (unsigned char *)s1;
-	us2 = (unsigned char *)s2;
-	if (n == 0)
-		return (0);
 	i = 0;
-	while (us1[i] && us2[i] && i < n - 1 && us1[i] == us2[i])
-		i++;
-	return ((int)(us1[i] - us2[i]));
+	undest = (unsigned char *)dest;
+	unsrc = (const unsigned char *)src;
+	if (n == 0 || undest == unsrc)
+		return (undest);
+	if (undest < unsrc)
+	{
+		while (i < n)
+		{
+			undest[i] = unsrc[i];
+			i++;
+		}
+	}
+	else
+	{
+		undest += n;
+		unsrc += n;
+		while (n-- > 0)
+			*(--undest) = *(--unsrc);
+	}
+	return (dest);
 }

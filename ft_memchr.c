@@ -1,29 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strncmp.c                                       :+:      :+:    :+:   */
+/*   ft_memchr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/17 02:44:54 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/19 00:08:59 by rsbaa            ###   ########.fr       */
+/*   Created: 2025/10/19 00:28:26 by rsbaa             #+#    #+#             */
+/*   Updated: 2025/10/19 01:05:05 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stddef.h>
 
-int	ft_strncmp(const char *s1, const char *s2, size_t n)
+void	*ft_memchr(const void *s, int c, size_t n)
 {
-	size_t				i;
-	const unsigned char	*us1;
-	const unsigned char	*us2;
+	unsigned char	*uns;
+	int				i;
 
-	us1 = (unsigned char *)s1;
-	us2 = (unsigned char *)s2;
-	if (n == 0)
-		return (0);
+	uns = (unsigned char *)s;
 	i = 0;
-	while (us1[i] && us2[i] && i < n - 1 && us1[i] == us2[i])
+	while (i < n)
+	{
+		if (uns[i] == (unsigned char)c)
+			return ((void *)&uns[i]);
 		i++;
-	return ((int)(us1[i] - us2[i]));
+	}
+	return (NULL);
 }
