@@ -6,18 +6,20 @@
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 00:28:26 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/19 01:05:05 by rsbaa            ###   ########.fr       */
+/*   Updated: 2025/10/27 00:53:41 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	*ft_memchr(const void *s, int c, size_t n)
 {
-	unsigned char	*uns;
-	int				i;
+	const unsigned char	*uns;
+	size_t				i;
 
-	uns = (unsigned char *)s;
+	uns = (const unsigned char *)s;
+	if (!uns)
+		return (NULL);
 	i = 0;
 	while (i < n)
 	{

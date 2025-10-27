@@ -6,11 +6,11 @@
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 00:11:45 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/19 00:27:15 by rsbaa            ###   ########.fr       */
+/*   Updated: 2025/10/27 01:29:14 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 int	ft_memcmp(const void *s1, const void *s2, size_t n)
 {

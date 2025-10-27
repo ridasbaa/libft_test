@@ -6,19 +6,22 @@
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 00:24:12 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/17 00:56:12 by rsbaa            ###   ########.fr       */
+/*   Updated: 2025/10/26 23:00:52 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 char	*strchr(const char *s, int c)
 {
-	while (*s)
+	if (!s)
+		return (NULL);
+	while (1)
 	{
 		if (*s == (char)c)
 			return ((char *)s);
+		if (*s == '\0')
+			return (NULL);
 		s++;
 	}
-	if (*s == (char)c)
-		return ((char *)s);
-	return (NULL);
 }

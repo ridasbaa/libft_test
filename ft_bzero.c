@@ -6,11 +6,11 @@
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 16:41:57 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/17 17:31:20 by rsbaa            ###   ########.fr       */
+/*   Updated: 2025/10/24 03:43:50 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 void	ft_bzero(void *s, size_t n)
 {

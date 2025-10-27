@@ -6,9 +6,11 @@
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 21:45:07 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/16 22:46:42 by rsbaa            ###   ########.fr       */
+/*   Updated: 2025/10/27 01:53:50 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -16,6 +18,8 @@ int	ft_atoi(const char *nptr)
 	int	i;
 	int	sign;
 
+	if (!nptr)
+		return (0);
 	i = 0;
 	while (nptr[i] == 32 || (nptr[i] >= 9 && nptr[i] <= 13))
 		i++;

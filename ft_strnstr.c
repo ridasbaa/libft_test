@@ -6,11 +6,11 @@
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 02:55:49 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/17 16:32:50 by rsbaa            ###   ########.fr       */
+/*   Updated: 2025/10/27 01:36:12 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stddef.h>
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {
