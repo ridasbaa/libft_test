@@ -6,14 +6,13 @@
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/20 16:36:41 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/21 00:25:52 by rsbaa            ###   ########.fr       */
+/*   Updated: 2025/10/28 03:55:54 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <stdlib.h>
-#include <stdio.h>
+#include "libft.h"
 
-int	count_words(const char *str, char c)
+static int	count_words(const char *str, char c)
 {
 	int	i;
 	int	words;
@@ -31,7 +30,7 @@ int	count_words(const char *str, char c)
 	return (words);
 }
 
-char	*malloc_word(const char *s, char c)
+static char	*malloc_word(const char *s, char c)
 {
 	char	*word;
 	int		word_len;
@@ -53,7 +52,7 @@ char	*malloc_word(const char *s, char c)
 	return (word);
 }
 
-void	*free_str(char **str, int i)
+static void	*free_str(char **str, int i)
 {
 	while (i >= 0)
 	{
@@ -63,15 +62,11 @@ void	*free_str(char **str, int i)
 	return (NULL);
 }
 
-char	**ft_split(const char *s, char c)
+static char	**apply_split(char **str, char const *s, char c)
 {
-	char	**str;
 	char	*word;
 	int		j;
 
-	str = malloc ((count_words(s, c) + 1) * sizeof(char *));
-	if (!str)
-		return (NULL);
 	j = 0;
 	while (*s)
 	{
@@ -88,6 +83,19 @@ char	**ft_split(const char *s, char c)
 				s++;
 		}
 	}
-	str[j] = '\0';
+	str[j] = NULL;
 	return (str);
+}
+
+char	**ft_split(char const *s, char c)
+{
+	char	**str;
+	char	*word;
+
+	if (!s)
+		return (NULL);
+	str = malloc ((count_words(s, c) + 1) * sizeof(char *));
+	if (!str)
+		return (NULL);
+	return (apply_split(str, s, c));
 }

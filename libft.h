@@ -6,7 +6,7 @@
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:31:07 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/23 02:33:42 by rsbaa            ###   ########.fr       */
+/*   Updated: 2025/10/28 06:10:26 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <stddef.h>
 # include <stdlib.h>
+# include <unistd.h>
 # include <stdio.h>
 
 int		ft_isalpha(int c);
