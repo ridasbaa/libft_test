@@ -6,7 +6,7 @@
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 22:15:16 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/25 21:48:57 by rsbaa            ###   ########.fr       */
+/*   Updated: 2025/10/30 16:42:26 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlen(const char *s)
 {
 	size_t	length;
 
-	if (!s)
-		return (0);
 	length = 0;
 	while (s[length])
 		length++;
