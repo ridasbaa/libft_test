@@ -6,7 +6,7 @@
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 01:16:02 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/27 22:56:08 by rsbaa            ###   ########.fr       */
+/*   Updated: 2025/10/30 02:41:44 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	*ft_calloc(size_t nmemb, size_t size)
 {
 	void			*area;
 
+	if (size != 0 && nmemb > SIZE_MAX / size)
+		return (NULL);
 	area = malloc(nmemb * size);
 	if (!area)
 		return (NULL);

@@ -6,7 +6,7 @@
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/17 17:50:40 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/25 21:48:27 by rsbaa            ###   ########.fr       */
+/*   Updated: 2025/10/30 02:37:21 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	if (!dest || !src)
 		return (NULL);
 	i = 0;
-	while (i < n)
+	while (i < n && source[i])
 	{
 		destination[i] = source[i];
 		i++;
