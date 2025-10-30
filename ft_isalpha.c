@@ -18,22 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-/*int	main (void)
-{
-	char ex[11] = {'a', 'z', 'A', 'Z', '-', '&', 130, '[', 'D', 't', '\0'};
-	char *ptr = ex;
-
-	while (*ptr)
-	{
-		if (ft_isalpha(*ptr++))
-		{
-			printf("YES, this char is alpha\n");
-		}
-		else
-		{
-			printf("NO, this char is not alpha\n");
-		}
-	}
-	return (0);
-}*/

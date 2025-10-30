@@ -90,7 +90,6 @@ static char	**apply_split(char **str, char const *s, char c)
 char	**ft_split(char const *s, char c)
 {
 	char	**str;
-	char	*word;
 
 	if (!s)
 		return (NULL);

@@ -18,24 +18,4 @@ int	ft_isdigit(int c)
 		return (1);
 	else
 		return (0);
-}	
-
-/*int	main (void)
-{
-	char ex[15] = {'1', '2', '3', '7', '-', '&', 'd', '[', '9', '1',
-			'\0', '0', '9', (char)200, '\0'};
-	char *ptr = ex;
-
-	while (*ptr)
-	{
-		if (ft_isdigit(*ptr++))
-		{
-			printf("YES, this char is a  digit\n");
-		}
-		else
-		{
-			printf("NO, this char is not a digit\n");
-		}
-	}
-	return (0);
-}*/
+}

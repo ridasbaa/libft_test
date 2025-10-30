@@ -19,22 +19,3 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-/*int	main (void)
-{
-	char ex[11] = {'a', 'z', 1, 'Z', '2', 127, 5, '[', '`', '*', '\0'};
-	char *ptr = ex;
-
-	while (*ptr)
-	{
-		if (ft_isalnum(*ptr++))
-		{
-			printf("YES, this char is alnum\n");
-		}
-		else
-		{
-			printf("NO, this char is not alnum\n");
-		}
-	}
-	return (0);
-}*/

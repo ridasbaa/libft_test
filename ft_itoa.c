@@ -45,7 +45,7 @@ char	*ft_itoa(int n)
 	}
 	else
 		nb = n;
-	if (n == 0)
+	if (nb == 0)
 		str[0] = '0';
 	while (nb > 0)
 	{

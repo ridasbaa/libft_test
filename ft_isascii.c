@@ -19,22 +19,3 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-/*int	main (void)
-{
-	char ex[11] = {'a', 'z', 'A', 'Z', '2', '4', 5, '[', '`', '*', '\0'};
-	char *ptr = ex;
-
-	while (*ptr)
-	{
-		if (ft_isascii(*ptr++))
-		{
-			printf("YES, this char is alnum\n");
-		}
-		else
-		{
-			printf("NO, this char is not alnum\n");
-		}
-	}
-	return (0);
-}*/

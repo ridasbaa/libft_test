@@ -30,7 +30,10 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 		return (srclen + destlen);
 	i = 0;
 	while (src[i] && (destlen + i) < size -1)
-		dest[destlen + i] = src[i++];
+	{
+		dest[destlen + i] = src[i];
+		i++;
+	}
 	dest[destlen + i] = '\0';
 	return (srclen + destlen);
 }
