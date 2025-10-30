@@ -6,7 +6,7 @@
 /*   By: rsbaa <rsbaa@student.1337.ma>              +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 00:31:07 by rsbaa             #+#    #+#             */
-/*   Updated: 2025/10/30 02:06:48 by rsbaa            ###   ########.fr       */
+/*   Updated: 2025/10/30 03:29:37 by rsbaa            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include <stddef.h>
 # include <stdlib.h>
 # include <unistd.h>
-# include <stdio.h>
+# include <stdint.h>
 
 typedef struct s_list
 {
